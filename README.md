@@ -1,6 +1,17 @@
-frontend-nanodegree-arcade-game
+Patricia's Frogger Arcade Game
 ===============================
+#### Welcome to the Frooger Game! Are you ready to start a new adventure looking for stars while running away from giant ladybugs? Let's go!!
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+#### But first, some important inscructions:
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* The goal of the game is to increase your score as much as possible.
+
+* You increase your score by moving the character to the lake and/or collecting Stars.
+
+* Use the arrow keys or the "WASD" keys on your keyboard to move the character (up, left, down, right).
+
+* Every time your character reaches the lake, the difficulty of the game will increase (enemies will go faster).
+
+* If you collide with any enemies, you will die.
+
+#### Good luck!

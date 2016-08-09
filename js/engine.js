@@ -13,7 +13,6 @@
  * the canvas' context (ctx) object globally available to make writing app.js
  * a little simpler to work with.
  */
-
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
@@ -81,23 +80,20 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        checkCollisions();
+        checkEvents();
     }
 
-    // Check collisions
-    function checkCollisions(){
-    /* Check for enemy collision.
-     * Allow for 10 pixel difference in alignment of enemy and player
-     * Y positions on the same row, due to centering of sprites.
-     * Collision occurs when opposite side X coords are within 75 pixels.
-     */
+    // Check Events
+    function checkEvents() {
         Score.showHighestScore();
-        if(player.y === star.y && player.x === star.x) {
+        // Handles what happens when the player pick up a star
+        if (player.y === star.y && player.x === star.x) {
             star.pickup();
             star.history();
             Score.update();
         };
-        if(player.y < -10) {
+        // Handles what happens when the Player reach the lake
+        if (player.y < -10) {
             Score.update();
             player.update();
             player.win();
@@ -106,18 +102,19 @@ var Engine = (function(global) {
                 enemy.increaseRate();
             });
         };
+        // Handles what happens when the Player is hit by a bug
         allEnemies.forEach(function(enemy) {
-          if(player.y - enemy.y == 10) {
-            if(player.x < enemy.x + 75 && player.x + 75 > enemy.x){
-              Score.reset();
-              player.update();
-              player.history();
-              star.update();
-              allEnemies.forEach(function(enemy) {
-              enemy.reset();
-              });
+            if (player.y - enemy.y == 10) {
+                if (player.x < enemy.x + 75 && player.x + 75 > enemy.x) {
+                    Score.reset();
+                    player.update();
+                    player.history();
+                    star.update();
+                    allEnemies.forEach(function(enemy) {
+                        enemy.reset();
+                    });
+                }
             }
-          }
         });
     }
 
@@ -145,12 +142,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/water-block.png', // Top row is water
+                'images/stone-block.png', // Row 1 of 3 of stone
+                'images/stone-block.png', // Row 2 of 3 of stone
+                'images/stone-block.png', // Row 3 of 3 of stone
+                'images/grass-block.png', // Row 1 of 2 of grass
+                'images/grass-block.png' // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -186,15 +183,15 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        if(star.visible) {
-            star.render();
-        }
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
 
         player.render();
 
+        if (star.visible) {
+            star.render();
+        }
     }
 
     /* This function does nothing but it could have been a good place to
@@ -226,4 +223,3 @@ var Engine = (function(global) {
     global.ctx = ctx;
 
 })(this);
-
