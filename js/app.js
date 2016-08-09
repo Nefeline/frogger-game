@@ -76,8 +76,7 @@ Player.prototype.handleInput = function(key) {
 Player.prototype.history = function() {
     var texts = [
         "Oh no! You got hit by a Ladybug! So sad... Try Again!",
-        "You died! Those Ladybugs are evil!",
-        "Oh no! Are you a suicidal?"
+        "You died! Those Ladybugs are evil!"
     ];
     var text = texts[Math.floor(Math.random() * texts.length)];
     document.getElementById('text').innerHTML = text;
@@ -87,7 +86,7 @@ Player.prototype.win = function() {
     var texts = [
         "Good! You took a bath!",
         "You like this lake, don't you?",
-        "Why are they running so fast? It's a marathon??"
+        "Why are those Ladybugs running so fast? It's a marathon??"
     ];
     var text = texts[Math.floor(Math.random() * texts.length)];
     document.getElementById('text').innerHTML = text;
@@ -111,7 +110,7 @@ Bonus.prototype.pickup = function() {
 // Random texts that appear when the Player pick up a star
 Bonus.prototype.history = function() {
     var texts = ["This star is sooo beautiful!",
-        "Look how shinny the are!",
+        "Love those stars! They are all yellow!",
         "Look at the stars, look how they shine for you!"
     ];
     var text = texts[Math.floor(Math.random() * texts.length)];
