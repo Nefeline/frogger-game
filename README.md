@@ -2,7 +2,7 @@ Patricia's Frogger Arcade Game
 ===============================
 #### Welcome to the Frogger Game! Are you ready to start a new adventure looking for stars while running away from giant ladybugs? Let's go!!
 
-#### But first, some important inscructions:
+#### But first, some important instructions:
 
 * The goal of the game is to increase your score as much as possible.
 
