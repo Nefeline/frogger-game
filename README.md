@@ -4,6 +4,8 @@ Patricia's Frogger Arcade Game
 
 #### But first, some important instructions:
 
+* To run the game click on index.html or visit my [GitHub page](https://nefeline.github.io/frogger-game/).
+
 * The goal of the game is to increase your score as much as possible.
 
 * You increase your score by moving the character to the lake and/or collecting Stars.
