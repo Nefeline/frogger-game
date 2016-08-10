@@ -1,4 +1,5 @@
 // Enemies the player must avoid
+"use strict";
 var Enemy = function(x, y) {
     this.sprite = 'images/enemy-bug.png';
     this.x = x;
@@ -154,14 +155,14 @@ Score.showHighestScore = function() {
     }
     // Now instantiate your objects.
     // Place all enemy objects in an array called allEnemies
-allEnemies = [];
+var allEnemies = [];
 for (var i = 1; i < 4; i++) {
     var enemy = new Enemy(0 - i * 101, 83 * i - 21);
     allEnemies.push(enemy);
 }
 // Place the player object in a variable called player
-player = new Player(202, 404);
-star = new Bonus(-100, -100);
+var player = new Player(202, 404);
+var star = new Bonus(-100, -100);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keydown', function(e) {
