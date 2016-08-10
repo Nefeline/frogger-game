@@ -92,7 +92,7 @@ var Engine = (function(global) {
             star.pickup();
             star.history();
             Score.update();
-        };
+        }
         // Handles what happens when the Player reach the lake
         if (player.y < -10) {
             Score.update();
@@ -102,7 +102,7 @@ var Engine = (function(global) {
             allEnemies.forEach(function(enemy) {
                 enemy.increaseRate();
             });
-        };
+        }
         // Handles what happens when the Player is hit by a bug
         allEnemies.forEach(function(enemy) {
             if (player.y - enemy.y == 10) {

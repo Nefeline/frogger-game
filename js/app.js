@@ -35,7 +35,7 @@ var Player = function(x, y) {
         this.x = x;
         this.y = y;
         this.carryItem = false;
-    }
+    };
     // Reset player's position to start location
 Player.prototype.update = function() {
     if (this.carryItem) {
@@ -126,25 +126,25 @@ Bonus.prototype.update = function() {
 // Draw the star image on the screen
 Bonus.prototype.render = function() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    }
+    };
     // Global variables to be used in the Score methods.
 var score = 0;
 var highestScore = 0;
 var newHighScore; // true when a new high score is reached.
 // Score Class: Contains methods to handle the game score
-var Score = function() {}
+var Score = function() {};
     // Update score by 10
 Score.update = function() {
         score += 10;
         document.getElementById('playerScore').innerHTML = score;
         return score;
-    }
+    };
     // Reset score
 Score.reset = function() {
         score = 0;
         document.getElementById('playerScore').innerHTML = score;
         return score;
-    }
+    };
     // If the current score is greater than the highest score, it replaces the highest score with the new one and display it in the browser.
 Score.showHighestScore = function() {
         if (score > highestScore) {
@@ -152,7 +152,7 @@ Score.showHighestScore = function() {
             newHighScore = true;
         }
         document.getElementById('highscore').innerHTML = "Your best Score: " + highestScore;
-    }
+    };
     // Now instantiate your objects.
     // Place all enemy objects in an array called allEnemies
 var allEnemies = [];
