@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300);
+
+body {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Quicksand', sans-serif;
+}
